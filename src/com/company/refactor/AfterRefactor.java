@@ -8,7 +8,7 @@ public class AfterRefactor {
         var invoices = new ArrayList<>(Invoice.generateInvoices());
 
         var firstFiveIds = invoices.stream()
-                .filter(invoice -> invoice.getCustomer() == Customer.ORACLE)
+                .filter(invoice -> invoice.getCustomer().equals(Customer.ORACLE))
                 .filter(invoice -> invoice.getTitle().contains("Training"))
                 .sorted(Comparator.comparing(Invoice::getAmount))
                 .map(Invoice::getId)
