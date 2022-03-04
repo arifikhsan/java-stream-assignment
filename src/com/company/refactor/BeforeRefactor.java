@@ -23,7 +23,6 @@ public class BeforeRefactor {
         }
 
         Collections.sort(oracleAndTrainingInvoices, new Comparator<Invoice>() {
-
             @Override
             public int compare(Invoice inv1, Invoice inv2) {
                 return Double.compare(inv1.getAmount(), inv2.getAmount());
@@ -39,6 +38,5 @@ public class BeforeRefactor {
         }
 
         System.out.println(firstFiveIds);
-
     }
 }
